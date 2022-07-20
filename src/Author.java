@@ -18,5 +18,16 @@ public class Author {
     public String toString() {
     return this.firstName + this.secondName;
     }
+    public int hashCode()
+    {
+        return this.firstName.hashCode() + this.secondName.hashCode();
+
+    }
+    public boolean equals(Object obj) {
+        Author ob = (Author) obj;
+        if (this == obj) return true;
+        if (this.firstName == ob.firstName && this.secondName == ob.secondName && this.hashCode() ==ob.hashCode()) return  true;
+        else return false;
+    }
 
 }
