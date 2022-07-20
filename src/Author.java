@@ -4,6 +4,7 @@ public class Author {
     public Author( String firstName, String secondName) {
         this.firstName = firstName;
         this.secondName = secondName;
+
     }
 
     public String getFirstName() {
@@ -13,4 +14,9 @@ public class Author {
     public String getSecondName() {
         return secondName;
     }
+
+    public String toString() {
+    return this.firstName + this.secondName;
+    }
+
 }
