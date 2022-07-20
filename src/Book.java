@@ -24,4 +24,16 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
+    public int hashCode()
+    {
+        return this.name.hashCode() + this.author.hashCode();
+
+    }
+    public boolean equals(Object obj) {
+        Book ob = (Book) obj;
+        if (this == obj) return true;
+        if (this.hashCode() == ob.hashCode() && this.year == ob.year) return  true;
+        else return false;
+    }
 }
+
